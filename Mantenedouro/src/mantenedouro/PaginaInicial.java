@@ -39,6 +39,7 @@ public class PaginaInicial extends javax.swing.JFrame {
         jButtonFuncionario = new javax.swing.JButton();
         jButtonFechar = new javax.swing.JButton();
         jButtonADM = new javax.swing.JButton();
+        jButtonSair = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -61,7 +62,7 @@ public class PaginaInicial extends javax.swing.JFrame {
             }
         });
 
-        jButtonFechar.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        jButtonFechar.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         jButtonFechar.setText("Fechar");
         jButtonFechar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,6 +75,14 @@ public class PaginaInicial extends javax.swing.JFrame {
         jButtonADM.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonADMActionPerformed(evt);
+            }
+        });
+
+        jButtonSair.setFont(new java.awt.Font("Segoe UI Black", 3, 18)); // NOI18N
+        jButtonSair.setText("Sair");
+        jButtonSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSairActionPerformed(evt);
             }
         });
 
@@ -91,12 +100,15 @@ public class PaginaInicial extends javax.swing.JFrame {
                         .addGap(48, 48, 48)
                         .addComponent(jButtonADM))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(268, 268, 268)
-                        .addComponent(jButtonFechar))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(204, 204, 204)
                         .addComponent(jLabel1)))
                 .addContainerGap(42, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButtonSair)
+                .addGap(90, 90, 90)
+                .addComponent(jButtonFechar)
+                .addGap(182, 182, 182))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -108,9 +120,11 @@ public class PaginaInicial extends javax.swing.JFrame {
                     .addComponent(jButtonAnimal)
                     .addComponent(jButtonADM)
                     .addComponent(jButtonFuncionario))
-                .addGap(68, 68, 68)
-                .addComponent(jButtonFechar)
-                .addContainerGap(88, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonFechar)
+                    .addComponent(jButtonSair))
+                .addGap(66, 66, 66))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -153,6 +167,10 @@ public class PaginaInicial extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButtonADMActionPerformed
 
+    private void jButtonSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSairActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_jButtonSairActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -193,6 +211,7 @@ public class PaginaInicial extends javax.swing.JFrame {
     private javax.swing.JButton jButtonAnimal;
     private javax.swing.JButton jButtonFechar;
     private javax.swing.JButton jButtonFuncionario;
+    private javax.swing.JButton jButtonSair;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables

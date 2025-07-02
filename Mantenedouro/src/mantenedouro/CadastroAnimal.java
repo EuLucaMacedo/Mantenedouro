@@ -43,6 +43,7 @@ public class CadastroAnimal extends javax.swing.JFrame {
         jTextEspecie = new javax.swing.JTextField();
         jTextProfissional = new javax.swing.JTextField();
         jTextReceituario = new javax.swing.JTextField();
+        jButtonVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -82,6 +83,14 @@ public class CadastroAnimal extends javax.swing.JFrame {
             }
         });
 
+        jButtonVoltar.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
+        jButtonVoltar.setText("Voltar");
+        jButtonVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonVoltarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -96,12 +105,6 @@ public class CadastroAnimal extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(25, 25, 25)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jTextReceituario)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(jButtonSalvar)
-                                    .addGap(228, 228, 228)
-                                    .addComponent(jButtonLimpar)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -114,7 +117,15 @@ public class CadastroAnimal extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel7)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextProfissional, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(jTextProfissional, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(jButtonSalvar)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jButtonLimpar)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jButtonVoltar))
+                                .addComponent(jTextReceituario, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(161, 161, 161)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -150,7 +161,8 @@ public class CadastroAnimal extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonSalvar)
-                    .addComponent(jButtonLimpar))
+                    .addComponent(jButtonLimpar)
+                    .addComponent(jButtonVoltar))
                 .addGap(25, 25, 25))
         );
 
@@ -197,6 +209,10 @@ public class CadastroAnimal extends javax.swing.JFrame {
         jTextReceituario.setText("");
     }//GEN-LAST:event_jButtonLimparActionPerformed
 
+    private void jButtonVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVoltarActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_jButtonVoltarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -235,6 +251,7 @@ public class CadastroAnimal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonLimpar;
     private javax.swing.JButton jButtonSalvar;
+    private javax.swing.JButton jButtonVoltar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

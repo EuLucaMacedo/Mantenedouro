@@ -48,6 +48,7 @@ public class CadastroFuncionario extends javax.swing.JFrame {
         jTextEndereco = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jTextFuncao = new javax.swing.JTextField();
+        jButtonVoltar = new javax.swing.JButton();
 
         jButtonSalvar.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
         jButtonSalvar.setText("Salvar");
@@ -93,6 +94,14 @@ public class CadastroFuncionario extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jLabel8.setText("Função:");
 
+        jButtonVoltar.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
+        jButtonVoltar.setText("Voltar");
+        jButtonVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonVoltarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -110,8 +119,10 @@ public class CadastroFuncionario extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jButtonSalva)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButtonLimpar)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButtonLimpar))
+                                .addComponent(jButtonVoltar))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel8)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -162,7 +173,8 @@ public class CadastroFuncionario extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonSalva)
-                    .addComponent(jButtonLimpar))
+                    .addComponent(jButtonLimpar)
+                    .addComponent(jButtonVoltar))
                 .addGap(50, 50, 50))
         );
 
@@ -230,6 +242,10 @@ public class CadastroFuncionario extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButtonLimparActionPerformed
 
+    private void jButtonVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVoltarActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_jButtonVoltarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -269,6 +285,7 @@ public class CadastroFuncionario extends javax.swing.JFrame {
     private javax.swing.JButton jButtonLimpar;
     private javax.swing.JButton jButtonSalva;
     private javax.swing.JButton jButtonSalvar;
+    private javax.swing.JButton jButtonVoltar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

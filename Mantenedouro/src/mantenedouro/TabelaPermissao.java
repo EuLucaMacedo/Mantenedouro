@@ -35,6 +35,7 @@ public class TabelaPermissao extends javax.swing.JFrame {
         jTableUsuario = new javax.swing.JTable();
         jButtonCadastrar = new javax.swing.JButton();
         jButtonExcluir = new javax.swing.JButton();
+        jButtonVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         addWindowFocusListener(new java.awt.event.WindowFocusListener() {
@@ -64,6 +65,14 @@ public class TabelaPermissao extends javax.swing.JFrame {
             }
         });
 
+        jButtonVoltar.setFont(new java.awt.Font("Segoe UI Black", 3, 18)); // NOI18N
+        jButtonVoltar.setText("Voltar");
+        jButtonVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonVoltarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -73,8 +82,10 @@ public class TabelaPermissao extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jButtonCadastrar)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButtonExcluir)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButtonExcluir))
+                        .addComponent(jButtonVoltar))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(104, Short.MAX_VALUE))
         );
@@ -86,7 +97,8 @@ public class TabelaPermissao extends javax.swing.JFrame {
                 .addGap(41, 41, 41)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonCadastrar)
-                    .addComponent(jButtonExcluir))
+                    .addComponent(jButtonExcluir)
+                    .addComponent(jButtonVoltar))
                 .addContainerGap(45, Short.MAX_VALUE))
         );
 
@@ -144,6 +156,10 @@ public class TabelaPermissao extends javax.swing.JFrame {
              jScrollPane1.setViewportView(jTableUsuario);
         }
     }//GEN-LAST:event_jButtonExcluirActionPerformed
+
+    private void jButtonVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVoltarActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_jButtonVoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -228,6 +244,7 @@ public class TabelaPermissao extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonCadastrar;
     private javax.swing.JButton jButtonExcluir;
+    private javax.swing.JButton jButtonVoltar;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTableUsuario;

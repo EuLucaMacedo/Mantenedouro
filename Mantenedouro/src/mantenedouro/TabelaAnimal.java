@@ -35,6 +35,7 @@ public class TabelaAnimal extends javax.swing.JFrame {
         jTableAnimal = new javax.swing.JTable();
         jButtonCadastrar = new javax.swing.JButton();
         jButtonExcluir = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         addWindowFocusListener(new java.awt.event.WindowFocusListener() {
@@ -77,6 +78,13 @@ public class TabelaAnimal extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setText("Voltar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -87,8 +95,10 @@ public class TabelaAnimal extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(67, 67, 67)
                         .addComponent(jButtonCadastrar)
+                        .addGap(27, 27, 27)
+                        .addComponent(jButtonExcluir)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButtonExcluir)))
+                        .addComponent(jButton1)))
                 .addGap(0, 69, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -98,7 +108,8 @@ public class TabelaAnimal extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonCadastrar)
-                    .addComponent(jButtonExcluir))
+                    .addComponent(jButtonExcluir)
+                    .addComponent(jButton1))
                 .addGap(27, 27, 27))
         );
 
@@ -143,6 +154,10 @@ public class TabelaAnimal extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTableAnimal);
 
     }//GEN-LAST:event_formWindowGainedFocus
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -227,6 +242,7 @@ public class TabelaAnimal extends javax.swing.JFrame {
             
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonCadastrar;
     private javax.swing.JButton jButtonExcluir;
     private javax.swing.JPanel jPanel1;
